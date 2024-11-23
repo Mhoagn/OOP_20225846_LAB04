@@ -5,10 +5,13 @@ public class DigitalVideoDisc {
     private float cost;
     private String director;
     private int length;
+    private static int nbDigitalVideoDiscs = 0;
 
     public DigitalVideoDisc(String title) {
         super();
         this.title = title;
+        nbDigitalVideoDiscs++; 
+        this.id = "DVD" + nbDigitalVideoDiscs; 
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
@@ -16,15 +19,21 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        nbDigitalVideoDiscs++; 
+        this.id = "DVD" + nbDigitalVideoDiscs; 
     }
 
+    
     public DigitalVideoDisc(String director, String category, String title, float cost) {
         super();
         this.director = director;
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++; 
+        this.id = "DVD" + nbDigitalVideoDiscs; 
     }
+
 
     public DigitalVideoDisc(String id, String title, String category, float cost, String director, int length) {
         super();
@@ -34,6 +43,10 @@ public class DigitalVideoDisc {
         this.cost = cost;
         this.director = director;
         this.length = length;
+    }
+
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
     }
 
     public String getId() {
@@ -85,12 +98,14 @@ public class DigitalVideoDisc {
     }
 
     public void displayInfo() {
+        System.out.println("ID: " + this.id);
         System.out.println("The title of DVD is: " + (this.title != null ? this.title : "N/A"));
         System.out.println("Category: " + (this.category != null ? this.category : "N/A"));
         System.out.println("Cost: $" + this.cost);
         System.out.println("Director: " + (this.director != null ? this.director : "N/A"));
         System.out.println("Length: " + (this.length > 0 ? this.length + " minutes" : "N/A"));
     }
+    
 
     public boolean checkLength() {
         return (this.length > 0);
