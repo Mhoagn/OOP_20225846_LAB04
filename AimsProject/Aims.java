@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Aims {
     public static void main(String[] args) {
         // Tạo giỏ hàng mới
@@ -5,8 +7,8 @@ public class Aims {
 
         // Tạo một số DVD mới
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("Inception", "Sci-Fi", 19.99f);
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Christopher Nolan", "Sci-Fi", "Inception", 19.99f);
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("001", "Inception", "Sci-Fi", 19.99f, "Christopher Nolan", 148);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Christopher Nolan", "Sci-Fi", "Teddy Bear", 19.99f);
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("001", "Superman", "Sci-Fi", 19.99f, "Christopher Nolan", 148);
 
 
 
@@ -19,6 +21,17 @@ public class Aims {
         // Hiển thị nội dung giỏ hàng trước khi xóa
         System.out.println("Before removing a DVD:");
         cart.displayItems();
+
+        ArrayList<DigitalVideoDisc> foundDVDs = cart.searchByTitle("Superman");
+        if (!foundDVDs.isEmpty()) {
+            System.out.println("Found DVDs by Title:");
+            for (DigitalVideoDisc dvd : foundDVDs) {
+                System.out.println(dvd.toString());
+            }
+        } else {
+            System.out.println("No DVDs found with the given title.");
+        }
+
 
         // Xóa một DVD khỏi giỏ hàng
         boolean isRemoved = cart.removeDVD(dvd2);
