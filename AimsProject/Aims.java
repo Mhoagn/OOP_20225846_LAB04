@@ -11,9 +11,9 @@ public class Aims {
 
 
         // Thêm DVD vào giỏ hàng
-        cart.addDVD(dvd1);
-        cart.addDVD(dvd2);
-        cart.addDVD(dvd3);
+        cart.addDigitalVideoDisc(dvd1);
+        cart.addDigitalVideoDisc(dvd2);
+        cart.addDigitalVideoDisc(dvd3);
 //        cart.addDVD(dvd4);
 
         // Hiển thị nội dung giỏ hàng trước khi xóa
