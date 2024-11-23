@@ -34,6 +34,18 @@ public class DigitalVideoDisc {
         this.id = "DVD" + nbDigitalVideoDiscs; 
     }
 
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        super();
+        this.title = title;
+        this.category = category;
+        this.director = director;
+        this.length = length;
+        this.cost = cost;
+        nbDigitalVideoDiscs++; // Tăng số lượng DVD
+        this.id = "DVD" + nbDigitalVideoDiscs; // Gán ID dựa trên số lượng
+    }
+    
+
 
     public DigitalVideoDisc(String id, String title, String category, float cost, String director, int length) {
         super();
@@ -105,6 +117,15 @@ public class DigitalVideoDisc {
         System.out.println("Director: " + (this.director != null ? this.director : "N/A"));
         System.out.println("Length: " + (this.length > 0 ? this.length + " minutes" : "N/A"));
     }
+
+    @Override
+    public String toString() {
+        return "DVD - " + title + " - " + (category != null ? category : "N/A") + 
+            " - " + (director != null ? director : "N/A") + 
+            " - " + (length > 0 ? length + " minutes" : "N/A") + 
+            ": $" + cost;
+    }
+
     
 
     public boolean checkLength() {
