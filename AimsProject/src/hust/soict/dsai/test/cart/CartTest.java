@@ -1,3 +1,7 @@
+package hust.soict.dsai.test.cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.*;
+
 public class CartTest {
     public static void main(String[] args) {
         // Tạo một giỏ hàng mới

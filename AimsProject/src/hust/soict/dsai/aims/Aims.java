@@ -1,4 +1,9 @@
+package hust.soict.dsai.aims;
+
 import java.util.ArrayList;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.Cart;
 
 public class Aims {
     public static void main(String[] args) {
@@ -16,11 +21,6 @@ public class Aims {
         cart.addDigitalVideoDisc(dvd1);
         cart.addDigitalVideoDisc(dvd2);
         cart.addDigitalVideoDisc(dvd3);
-//        cart.addDVD(dvd4);
-
-        // Hiển thị nội dung giỏ hàng trước khi xóa
-        System.out.println("Before removing a DVD:");
-        cart.displayItems();
 
         ArrayList<DigitalVideoDisc> foundDVDs = cart.searchByTitle("Superman");
         if (!foundDVDs.isEmpty()) {
@@ -32,6 +32,9 @@ public class Aims {
             System.out.println("No DVDs found with the given title.");
         }
 
+        // Hiển thị nội dung giỏ hàng trước khi xóa
+        System.out.println("Before removing a DVD:");
+        cart.displayItems();
 
         // Xóa một DVD khỏi giỏ hàng
         boolean isRemoved = cart.removeDVD(dvd2);
