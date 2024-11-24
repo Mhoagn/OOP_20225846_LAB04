@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>OtherProjects</name>
+	<name>YourProjectName</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,11 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-			<id>1732439784414</id>
-=======
-			<id>1732441417252</id>
->>>>>>> 058bfdf9048fcac1a555433ba73ca6256de25c17
+			<id>1732435067505</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
